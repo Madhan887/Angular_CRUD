@@ -1,0 +1,18 @@
+<p>home works!</p>
+<table border="3" rules="" >
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>quantity</th>
+        <th>Description</th>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.quantity}}</td>
+        <td>{{p.description}}</td>
+        <td><input type="button" value="delete" (click)="delete(p.id)"></td>
+        <td><input type="button" value="update"  routerLink="/update/{{p.id}}"></td>
+    </tr>
+</table>
